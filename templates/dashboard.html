@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fff;
+            color: #333;
+            margin: 0;
+            padding: 40px;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .form-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .form-row input[type="text"] {
+            flex: 1;
+            margin-right: 10px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-row input[type="text"]:last-child {
+            margin-right: 0;
+        }
+        button {
+            background-color: #555;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #333;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #333;
+            background-color: #f4f4f4;
+            padding: 10px 15px;
+            border-radius: 4px;
+        }
+        a:hover {
+            background-color: #ddd;
+        }
+        @media (max-width: 700px) {
+            .form-row {
+                flex-direction: column;
+            }
+            .form-row input[type="text"] {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+            .form-row input[type="text"]:last-child {
+                margin-bottom: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello {{name}}!!</h1>
+    <form method="post">
+        <div class="form-row">
+            <input type="text" name="a11" placeholder="a11" required>
+            <input type="text" name="a12" placeholder="a12" required>
+            <input type="text" name="a13" placeholder="a13" required>
+        </div>
+        <div class="form-row">
+            <input type="text" name="a21" placeholder="a21" required>
+            <input type="text" name="a22" placeholder="a22" required>
+            <input type="text" name="a23" placeholder="a23" required>
+        </div>
+        <div class="form-row">
+            <input type="text" name="a31" placeholder="a31" required>
+            <input type="text" name="a32" placeholder="a32" required>
+            <input type="text" name="a33" placeholder="a33" required>
+        </div>
+        <div class="form-row">
+            <input type="text" name="b1" placeholder="b1" required>
+            <input type="text" name="b2" placeholder="b2" required>
+            <input type="text" name="b3" placeholder="b3" required>
+        </div>
+        <button type="submit">Solve</button>
+    </form>
+    <a href="{{url_for('logout')}}">Press here to logout</a>
+</body>
+</html>

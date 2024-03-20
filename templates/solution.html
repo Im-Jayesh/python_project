@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Solution</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fff;
+            color: #333;
+            margin: 0;
+            padding: 40px;
+            line-height: 1.6;
+        }
+        h1 {
+            background-color: black;
+            /* border-bottom: 2px solid #cdcbcb; */
+            box-shadow: 10px 10px #4a4a4a ;
+            border-radius: 15px;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            color: azure;
+        }
+        p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        @media (max-width: 700px) {
+            .container {
+                width: 95%;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Gauss-Jacobi:</h1>
+        <p>Solution: {{ solution }}</p>
+        <p>Iterations: {{ iterations }}</p><br>
+        <h1>Gauss-Seidel:</h1>
+        <p>Solution: {{ solution1 }}</p>
+        <p>Iterations: {{ iterations1 }}</p>
+    </div>
+</body>
+</html>
